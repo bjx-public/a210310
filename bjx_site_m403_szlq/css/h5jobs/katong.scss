@@ -1,0 +1,413 @@
+// 进行适配 单位换算
+@function rem($px) {
+  @return #{($px / 32)}rem;
+}
+// common
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: rem(320);
+  overflow: hidden;
+}
+p, h3, h4{
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  .swiper-slide {
+    position: relative;
+  }
+}
+// 页面
+.home {
+  background: #0568dd url('../../img/h5jobs/katong/gezi.png');
+  background-size: 100%;
+  overflow: hidden;
+  .title {
+    margin-top: 110/1008*100%;
+    background: url('../../img/h5jobs/katong/line.png') no-repeat center;
+    background-size: rem(465/2) rem(417/2);
+    position: relative;
+    height: rem(417/2);
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(526/2);
+      height: rem(282/2);
+    }
+    p {
+      text-align: center;
+      width: 80%;
+      margin-top: rem(250/2);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: rem(25);
+      color: #303030;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  img.people {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(496/2);
+    height: rem(402/2);
+  }
+}
+
+.companyInfo {
+  background-color: #e6d102;
+  text-align: center;
+  overflow: hidden;
+  img.title {
+    margin-top: rem(25);
+    width: rem(271/2);
+    height: rem(30);
+  }
+  .content {
+    width: rem(544/2);
+    height: 776/1008*100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    img.com {
+      margin-top: rem(6);
+      width: rem(514/2);
+      height: rem(343/2);
+    }
+    #swiper-content {
+      max-height: 40%;
+      .swiper-slide {
+        height: auto;
+        div {
+          text-align: left;
+          font-size: rem(14);
+          padding: 0 rem(10);
+          line-height: rem(24);
+        }
+      }
+    }
+  }
+  img.hand {
+    position: absolute;
+    bottom: rem(-24);
+    left: 0;
+    width: rem(320);
+    height: rem(77);
+  }
+}
+
+.hotJob {
+  background: #41c0b1;
+  text-align: center;
+  img.children {
+    margin-top: rem(20); 
+    width: rem(407/2);
+    height: rem(163/2);
+  }
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 150/1008*100%;
+    transform: translateX(-50%);
+    width: rem(558/2);
+    height: 820/1008*100%;
+    background-color: #fff; 
+    text-align: center;
+    img.title {
+      margin-top: rem(16);
+      width: rem(276/2);
+      height: rem(51/2);
+    }
+    #swiper-job {
+      max-height: 80%;
+      .swiper-slide {
+        height: auto;
+        .job-list {
+          padding: 0 rem(20);
+          height: 80%;
+          overflow: auto;
+          .item {
+            padding: rem(10) 0;
+            text-align: left;
+            position: relative;
+            border-bottom: 1px dashed #ccc;
+            p {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              padding-right: rem(62);
+            }
+            p:first-of-type {
+              font-size: rem(14);
+              line-height: rem(20);
+            }
+            p:last-of-type {
+              font-size: rem(12);
+              color: #787878;
+            }
+            a {
+              text-align: center;
+              position: absolute;
+              top: rem(20);
+              right: 0;
+              font-size: rem(12);
+              line-height: rem(22);
+              text-decoration: none;
+              display: block;
+              color: white;
+              background: #42c1b2;
+              width: rem(60);
+              height: rem(22);
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  img.zoom {
+    position: absolute;
+    right: rem(5);
+    bottom: rem(10);
+    width: rem(62/2);
+    height: rem(57/2);
+  }
+}
+
+.environment {
+  background-color: #a7c8ed;
+  text-align: center;
+  img.title {
+    margin-top: rem(25);
+    width: rem(259/2);
+    height: rem(27);
+  }
+  .env-list {
+    margin-top: rem(30);
+    #swiper-img {
+      margin: 10px auto;
+      width: 80%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .big_img {
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+    #big_img {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.welfare {
+  background-color: #e8d302;
+  text-align: center;
+  img.title {
+    margin-top: rem(25);
+    width: rem(433/2);
+    height: rem(57/2);
+  }
+  .welfare-list {
+    margin: rem(25) auto;
+    position: relative;
+    width: rem(540/2);
+    height: 788/1008*100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: rem(30) rem(10);
+    box-sizing: border-box; 
+    img.huan {
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      transform: translateX(-50%);
+      width: rem(524/2);
+      height: rem(54/2);
+    }
+    .item {
+      margin: rem(5) 0;
+      box-sizing: border-box;
+      float: left;
+      background: url('../../img/h5jobs/katong/wel-item.png') no-repeat center;
+      width: 50%;
+      padding: 0 12%;
+      height: rem(55/2);
+      background-size: contain;
+      font-size: rem(14);
+      line-height: rem(25);
+      text-overflow: ellipsis;
+      display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+      -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+      -webkit-line-clamp: 1; /** 显示的行数 **/
+      overflow: hidden;
+    }
+    img.hand {
+      position: absolute;
+      width: rem(217/2*0.8);
+      height: rem(130/2*0.8);
+      right: 0;
+      bottom: 280/1008*100%;
+    }
+    img.money {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(436/2*0.8);
+      height: rem(341/2*0.8);
+    }
+  }
+}
+
+.contactUs {
+  background: #f77d4d url('../../img/h5jobs/katong/gezi.png');
+  background-size: 100%;
+  text-align: center;
+  img.title {
+    margin-top: rem(25);
+    width: rem(270/2);
+    height: rem(56/2);
+  }
+  .content {
+    position: relative;
+    margin: 0 auto;
+    margin-top: rem(25);
+    background: url('../../img/h5jobs/katong/paper.png') no-repeat center;
+    background-size: 100%;
+    width: rem(477/2);
+    height: rem(558/2);
+    padding: rem(50) rem(20);
+    box-sizing: border-box;
+    p {
+      text-align: left;
+      font-size: rem(12);
+    }
+    p.address {
+      text-indent: -3em;
+      padding-left: 3em; 
+    }
+    .benzi {
+      position: absolute;
+      left: rem(-2);
+      top: rem(-18);
+      width: rem(100/2);
+      height: rem(107/2);
+    }
+    .icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: rem(69/2);
+      height: rem(93/2);
+    }
+  }
+  .katong {
+    position: absolute;
+    bottom: rem(-6);
+    left: 0;
+    width: 100%;
+  }
+}
+
+.more {
+  overflow: hidden;
+  background-color: #4399e7;
+  .person {
+    position: absolute;
+    top: rem(10);
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(206/2);
+    height: rem(233/2);
+    z-index: 1;
+  }
+  .content {
+    width: rem(540/2);
+    height: rem(468/2);
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(108);
+    text-align: center;
+    box-sizing: border-box;
+    padding: rem(20) 0;
+    .p1 {
+      color: #4399e7;
+      font-size: rem(18);
+    }
+    .code {
+      width: rem(259/2);
+      height: rem(259/2);
+    }
+    .p2, .p3 {
+      color: #565656;
+      font-size: rem(14);
+    }
+  }
+  .vote {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: rem(10) 0;
+    p:first-of-type {
+      font-size: rem(14);
+    }
+    .zan {
+      width: rem(109/2);
+      height: rem(107/2);
+    }
+    .actived {
+      -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+      filter: grayscale(100%);
+    }
+    p:last-of-type{
+      position: relative;
+      font-size: rem(14);
+      .add {
+        display: none;
+        position: absolute;
+        left: rem(110);
+        bottom: rem(15);
+      }
+    }
+  }
+}

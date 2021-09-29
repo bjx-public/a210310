@@ -1,0 +1,508 @@
+// 进行适配 单位换算
+@function rem($px) {
+  @return #{($px / 32)}rem;
+}
+// common
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: rem(320);
+  overflow: hidden;
+}
+p, h3, h4{
+  margin: 0;
+  padding: 0;
+}
+#swiper-container {
+  width: 100%;
+  height: 100%;
+  background: url('../../img/h5jobs/xiaoyuan/bg.jpg') no-repeat center;
+  background-size: 100% 100%;
+  .swiper-slide {
+    position: relative;
+    .foot {
+      text-align: center;
+      width: 100%;
+      font-size: rem(31.63/2);
+      letter-spacing: rem(10);
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+    }
+    .frame {
+      width: 100%;
+      height: 100%;
+      background: #1473d5;
+      opacity: .2;
+      filter:alpha(opacity=20);
+      border-radius: 4px;
+    }
+  }
+}
+
+// 页面
+.home {
+  color: white;
+  overflow: hidden;
+  font-size: rem(12);
+  .title {
+    .liuxing {
+      position: absolute;
+      right: rem(34);
+      top: rem(24);
+      width: rem(452/2);
+      height: rem(510/2);
+    }
+    .dream {
+      position: absolute;
+      top: rem(60);
+      left: rem(15);
+      width: rem(564/2);
+      height: rem(395/2);
+    }
+    .planet {
+      position: absolute;
+      top: rem(230/2-40);
+      left: rem(330/2);
+      width: rem(68/2);
+      height: rem(68/2);
+    }
+    p:first-of-type {
+      position: absolute;
+      left: rem(210);
+      top: rem(96);
+      font-size: rem(24/2);
+    }
+    p:last-of-type {
+      letter-spacing: 1px;
+      position: absolute;
+      left: rem(76);
+      top: rem(190);
+      font-size: rem(30.4/2);
+    }
+  }
+  .companyName {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 650;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    padding: 0 rem(20);
+    font-size: rem(47.29/2);
+  }
+  .cont {
+    position: absolute;
+    text-align: center;
+    color: #f0f0f3;
+    width: 125%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 15%;
+    font-size: rem(12);
+    transform: scale(0.8);
+    transform-origin: left top;
+  }
+}
+
+.companyInfo {
+  color: white;
+  padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+  box-sizing: border-box;
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    h4 {
+      font-size: rem(36.34/2);
+      margin-top: rem(106/2);
+      margin-left: rem(162/2);
+    }
+    .planet {
+      position: absolute;
+      left: rem(25);
+      top: rem(40);
+      width: rem(105/2);
+      height: rem(104/2);
+    }
+    .line {
+      border-top: 1px solid white;
+      width: rem(175);
+      margin-top: rem(2);
+      margin-left: rem(50); 
+    }
+    #swiper-content {
+      max-height: 40%;
+      .swiper-slide {
+        height: auto;
+        div {
+          margin-top: rem(20);
+          font-size: rem(12);
+          padding: 0 rem(42);
+        }
+      }
+    }
+    .comInfo {
+      position: absolute;
+      left: rem(40);
+      bottom: rem(50);
+      width: rem(484/2);
+      height: rem(296/2);
+    }
+  }
+}
+
+.hotJob {
+    color: white;
+    padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+    box-sizing: border-box;
+    .content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      h4 {
+        font-size: rem(36.34/2);
+        margin-top: rem(106/2);
+        margin-left: rem(162/2);
+      }
+      .planet {
+        position: absolute;
+        left: rem(25);
+        top: rem(40);
+        width: rem(105/2);
+        height: rem(104/2);
+      }
+      .line {
+        border-top: 1px solid white;
+        width: rem(175);
+        margin-top: rem(2);
+        margin-left: rem(50); 
+      }
+      #swiper-job {
+        height: 68%;
+        .swiper-slide {
+          height: auto;
+          .job-list {
+            padding: rem(20) rem(36);
+            .item {
+              position: relative;
+              height: rem(50);
+              background: url('../../img/h5jobs/xiaoyuan/arrows.png') no-repeat right 85%;
+              background-size: rem(421/2) rem(77/2); 
+              .dian {
+                width: rem(30);
+                height: rem(7.5);
+              }
+              span {
+				position: absolute;
+				left: rem(55);
+				top: rem(22);
+				width: 60%;
+				white-space: nowrap;
+                font-weight: 550;
+				font-size: rem(12);
+				text-overflow: ellipsis;
+				overflow: hidden;  /** 隐藏超出的内容 **/
+              }
+              a {
+                position: absolute;
+                right: rem(4);
+                top: rem(15);
+                width: rem(56/2);
+                height: rem(55/2);
+                background: url('../../img/h5jobs/xiaoyuan/go.png') no-repeat right;
+                background-size: rem(56/2) rem(55/2); 
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+.environment {
+    color: white;
+    padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+    box-sizing: border-box;
+    .content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      h4 {
+        font-size: rem(36.34/2);
+        margin-top: rem(106/2);
+        margin-left: rem(162/2);
+      }
+      .planet {
+        position: absolute;
+        left: rem(25);
+        top: rem(40);
+        width: rem(105/2);
+        height: rem(104/2);
+      }
+      .line {
+        border-top: 1px solid white;
+        width: rem(175);
+        margin-top: rem(2);
+        margin-left: rem(50); 
+      }
+      .env-list {
+        margin-top: rem(35);
+        text-align: center;
+        padding: 0 rem(45);
+        #swiper-img {
+          margin: 10px auto;
+          width: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .big_img {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      #big_img {
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+}
+
+.welfare {
+    color: white;
+    padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+    box-sizing: border-box;
+    .content {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      h4 {
+        font-size: rem(36.34/2);
+        margin-top: rem(106/2);
+        margin-left: rem(162/2);
+      }
+      .planet {
+        position: absolute;
+        left: rem(25);
+        top: rem(40);
+        width: rem(105/2);
+        height: rem(104/2);
+      }
+      .line {
+        border-top: 1px solid white;
+        width: rem(175);
+        margin-top: rem(2);
+        margin-left: rem(50); 
+      }
+      .line1 {
+        position: absolute;
+        left: rem(50);
+        top: 220/1080*100%;
+        height: 635/1080*100%;
+        width: 1px;
+        background-color: white;
+      }
+      .line2 {
+        position: absolute;
+        left: rem(55);
+        top: 320/1080*100%;
+        height: 635/1080*100%;
+        width: 1px;
+        background-color: white;
+      }
+      .line3 {
+        position: absolute;
+        left: rem(78/2);
+        bottom: 164/1080*100%;
+        height: 1px;
+        width: rem(240);
+        background-color: white;
+      }
+      #swiper-welfare {
+        max-height: 55%;
+        .swiper-slide {
+          height: auto;
+          .welfare-list {
+            margin-top: rem(45); 
+            .item {
+              margin: rem(10) rem(68); 
+              border: 2px solid #f2eeee;
+              width: rem(200);
+              height: rem(30);
+              font-size: rem(12);
+              line-height: rem(30);
+              text-align: center;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+}
+
+.contactUs {
+    color: white;
+    padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+    box-sizing: border-box;
+    .content {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      h4 {
+        font-size: rem(36.34/2);
+        margin-top: rem(106/2);
+        margin-left: rem(162/2);
+      }
+      .planet {
+        position: absolute;
+        left: rem(25);
+        top: rem(40);
+        width: rem(105/2);
+        height: rem(104/2);
+      }
+      .line {
+        border-top: 1px solid white;
+        width: rem(175);
+        margin-top: rem(2);
+        margin-left: rem(50); 
+      }
+      .line1 {
+        position: absolute;
+        left: rem(50);
+        top: 220/1080*100%;
+        height: 635/1080*100%;
+        width: 1px;
+        background-color: white;
+      }
+      .line2 {
+        position: absolute;
+        left: rem(55);
+        top: 320/1080*100%;
+        height: 635/1080*100%;
+        width: 1px;
+        background-color: white;
+      }
+      .line3 {
+        position: absolute;
+        left: rem(78/2);
+        bottom: 164/1080*100%;
+        height: 1px;
+        width: rem(240);
+        background-color: white;
+      }
+      .contact-info{
+        padding-right: rem(43); 
+        position: absolute;
+        bottom:466/1080*100%;
+        left: rem(138/2);
+        p {
+          font-size: rem(12)
+        }
+        p.address {
+          text-indent: -3em;
+          padding-left: 3em; 
+        }
+      }
+    }
+}
+
+.more {
+color: white;
+padding: rem(30) rem(56/2) rem(74/2) rem(56/2);
+box-sizing: border-box;
+text-align: center;
+.content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    h4 {
+    text-align: left;
+    font-size: rem(36.34/2);
+    margin-top: rem(106/2);
+    margin-left: rem(162/2);
+    }
+    .planet {
+    position: absolute;
+    left: rem(25);
+    top: rem(40);
+    width: rem(105/2);
+    height: rem(104/2);
+    }
+    .line {
+    border-top: 1px solid white;
+    width: rem(175);
+    margin-top: rem(2);
+    margin-left: rem(50); 
+    }
+    .code {
+    margin: 0 auto;
+    width: rem(259/2);
+    height: rem(259/2);
+    margin-top: 100/1080*100%; 
+    }
+    p {
+    font-size: rem(12);
+    margin: 3px auto;
+    }
+    .line1 {
+    border-top: 1px solid white;
+    width: rem(223);
+    margin-left: rem(50); 
+    }
+    .dian-zan {
+    font-weight: 650;
+    font-size: rem(15);
+    }
+    .zan {
+    width: rem(152/2);
+    height: rem(152/2);
+    }
+    .actived {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    }
+    p:last-of-type{
+    position: relative;
+    .add {
+        display: none;
+        position: absolute;
+        left: rem(110);
+        bottom: rem(15);
+    }
+    }
+}
+}
